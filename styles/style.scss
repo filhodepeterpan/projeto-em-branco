@@ -1,0 +1,52 @@
+@import 'root';
+@import 'media.query';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: var(--fonte-padrao);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    header{
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    main{
+
+    }
+
+    footer{
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
+
+#home{
+    background: linear-gradient(white, black);
+
+    header{
+        h1{
+            color: black;
+            text-align: center;
+    
+            strong{
+                color: rgb(249, 39, 249);
+            } 
+        }
+    }
+
+    footer{
+        h3{
+            color: white;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+# 🧱 Projeto em Branco - Template Padrão com SCSS
+
+Este é um projeto base feito para iniciar uma aplicação web com uma estrutura de pastas e arquivos pronta. Ele já vem estruturado com:
+
+- Organização de arquivos por responsabilidade
+- Suporte a SCSS
+- Uso de variáveis com `:root`
+- Estrutura pronta para deploy no Vercel
+
+---
+
+## 📁 Estrutura de pastas
+
+```
+📁 projeto-em-branco/
+├── 📁 assets/
+│   └── 📁 audio/
+│   └── 📁 fonts/          
+│   └── 📁 img/
+│   └── 📁 video/ 
+├── 📁 pages/
+├── 📁 scripts/
+│   └── 📜 script.js            # Arquivo JavaScript
+├── 📁 styles/
+│   └── 🎨 _media.query.scss     # Estilos responsivos
+│   ├── 🎨 _root.scss            # Variáveis e configurações globais
+│   ├── 🎨 style.scss           # Estilos em geral
+├── 🚫 .gitignore
+├── 📄 index.html               # Página inicial
+├── ⚙️ package.lock.json       # Mantém a versão estável
+├── ⚙️ package.json            # Dependências
+└── 📑 README.md
+```
+
+---
+
+## ⚙️ Requisitos
+
+- [Node.js e NPM](https://nodejs.org/)
+- [Sass](https://sass-lang.com/)
+- Live Server (recomendado no VSCode)
+- [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) (extensão do VSCode)
+
+---
+
+## 🚀 Como usar o projeto
+
+### 1. Faça o clone
+
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
+cd seu-repo
+```
+
+### 2. Instale as dependências (se houver `package.json`)
+
+```bash
+npm install
+```
+
+### 3. Compile o SCSS
+
+Para compilar os arquivos `.scss`, utilize a extensão **Live Sass Compiler** no VS Code.
+
+Depois de instalar, clique em **"Watch Sass"** no rodapé do editor. Isso fará com que o arquivo `style.scss` seja automaticamente compilado para `style.css` toda vez que você salvar uma alteração.
+
+> 💡 O Live Sass Compiler também cria um arquivo `style.css.map` para ajudar no desenvolvimento com o DevTools do navegador.
+
+
+### 4. Inicie com Live Server
+
+Abra o projeto com o Live Server para ver as alterações em tempo real.
+
+---
+
+## 📝 Observações
+
+- **NÃO edite diretamente o `style.css`** — ele é gerado automaticamente pelo Sass.
+- **NÃO retire o `_ (underline)` dos arquivos `.scss`** — isso garante que somente o `style.css` será gerado, recebendo imports do `_media.query.scss` e do `_root.scss`, sem a necessidade de compilá-los individualmente.
+- Estilos devem ser escritos apenas nos arquivos `.scss`.
+- O `style.css` e o `style.css.map` estão no `.gitignore` para evitar conflitos e forçar o uso correto do Sass.
+- Para fazer **deploy**, execute:
+
+```bash
+npm run build
+```
+
+Isso compilará o SCSS uma vez, gerando os arquivos necessários para produção.
+
+---
+
+## 🌐 Deploy no Vercel
+
+1. Crie uma conta e importe o projeto do GitHub.
+2. Configure o comando de build:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `./`
+
+Pronto! A Vercel cuidará de compilar o SCSS antes de servir os arquivos.
+
+### OBS:
+- Essa é a linha do `package.json` responsável por essa configuração de build:    
+> "build": "sass ./styles/style.scss ./styles/style.css --no-source-map"
+
+
+---
+
+## 🤝 Contribuindo
+
+Sinta-se livre para copiar, melhorar ou adaptar esse template do seu jeito. E se quiser, me adiciona lá no [Linkedin](https://www.linkedin.com/in/douglassoaressantos/) ou no [BlueSky](https://bsky.app/profile/filhodepeterpan.bsky.social) =)
+
+
+
