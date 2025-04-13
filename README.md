@@ -19,6 +19,9 @@ Este é um projeto base feito para iniciar uma aplicação web com uma estrutura
 │   └── 📁 img/
 │   └── 📁 video/ 
 ├── 📁 pages/
+├── 📁 public/
+│   ├── 🎨 style.css           # Arquivo gerado após a compilação do SASS
+│   ├── 🎨 style.css.map       # Arquivo gerado após a compilação do SASS
 ├── 📁 scripts/
 │   └── 📜 script.js            # Arquivo JavaScript
 ├── 📁 styles/
@@ -60,11 +63,17 @@ npm install
 
 ### 3. Compile o SCSS
 
-Para compilar os arquivos `.scss`, utilize a extensão **Live Sass Compiler** no VS Code.
+Para compilar os arquivos `.scss` e gerar o arquivo `.css`, você pode usar o comando de build no terminal. No seu VS Code, basta rodar:
 
-Depois de instalar, clique em **"Watch Sass"** no rodapé do editor. Isso fará com que o arquivo `style.scss` seja automaticamente compilado para `style.css` toda vez que você salvar uma alteração.
+```bash
+npm run build
+```
+
+Isso irá compilar os arquivos SCSS uma vez e gerar o arquivo style.css na pasta styles.
 
 > 💡 O Live Sass Compiler também cria um arquivo `style.css.map` para ajudar no desenvolvimento com o DevTools do navegador.
+
+> 💡 A compilação com o comando npm run build também evita que arquivos indesejados, como o style.css.map, sejam incluídos no seu repositório, já que estão no .gitignore.
 
 
 ### 4. Inicie com Live Server
@@ -100,7 +109,7 @@ Pronto! A Vercel cuidará de compilar o SCSS antes de servir os arquivos.
 
 ### OBS:
 - Essa é a linha do `package.json` responsável por essa configuração de build:    
-> "build": "sass ./styles/style.scss ./styles/style.css --no-source-map"
+> "build": "sass ./styles/style.scss ./public/style.css --no-source-map"
 
 
 ---
