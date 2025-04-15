@@ -61,6 +61,12 @@ cd seu-repo
 npm install
 ```
 
+e
+
+```bash
+npm install -D sass
+```
+
 ### 3. Compile o SCSS
 
 Para compilar os arquivos `.scss` e gerar o arquivo `.css`, você pode usar o comando de build no terminal. No seu VS Code, basta rodar:
@@ -81,6 +87,17 @@ Isso irá compilar os arquivos SCSS uma vez e gerar o arquivo style.css na pasta
 Abra o projeto com o Live Server para ver as alterações em tempo real.
 
 ---
+### 5. Mantenha o SASS no modo "Watching"
+
+Rode uma única vez este comando:
+
+```bash
+npm run sass
+```
+
+E pronto! Agora é só construir seu site e seus estilos.
+
+---
 
 ## 📝 Observações
 
@@ -88,15 +105,6 @@ Abra o projeto com o Live Server para ver as alterações em tempo real.
 - **NÃO retire o `_ (underline)` dos arquivos `.scss`** — isso garante que somente o `style.css` será gerado, recebendo imports do `_media.query.scss` e do `_root.scss`, sem a necessidade de compilá-los individualmente.
 - Estilos devem ser escritos apenas nos arquivos `.scss`.
 - O `style.css` e o `style.css.map` estão no `.gitignore` para evitar conflitos e forçar o uso correto do Sass.
-- Para fazer **deploy**, execute:
-
-```bash
-npm run build
-```
-
-Isso compilará o SCSS uma vez, gerando os arquivos necessários para produção.
-
----
 
 ## 🌐 Deploy no Vercel
 
